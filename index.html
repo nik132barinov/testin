@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Центр компетенций АПК</title>
+<style>
+  body {font-family: Arial, sans-serif; margin:0; padding:0;}
+  header {background:#f5f5f5; padding:10px 20px; position:sticky; top:0; z-index:1000;}
+  nav ul {list-style:none; margin:0; padding:0; display:flex; align-items:center;}
+  nav li {margin-right:15px; position:relative;}
+  nav a {text-decoration:none; color:#333;}
+  nav .dropdown {display:none; position:absolute; background:#fff; box-shadow:0 2px 4px rgba(0,0,0,0.1); padding:10px;}
+  nav li:hover .dropdown {display:block;}
+  .hero {background:url('https://via.placeholder.com/1200x400') center/cover no-repeat; color:#fff; text-align:center; padding:80px 20px;}
+  .hero button {padding:10px 20px;}
+  .advantages, .sectors, .info, .slider, .faq, .partners {padding:40px 20px;}
+  .advantages .item {display:inline-block; width:22%; text-align:center; margin-right:2%;}
+  .tabs button {margin-right:10px;}
+  .tabcontent {display:none; margin-top:20px;}
+  .accordion {cursor:pointer; padding:10px; border:1px solid #ccc; margin-bottom:5px;}
+  .panel {display:none; padding:10px; border:1px solid #ccc; border-top:none;}
+  .slider .slide {display:inline-block; width:200px; height:120px; background:#ddd; margin-right:10px;}
+  .sticky-cta {position:fixed; bottom:0; left:0; right:0; background:#333; color:#fff; padding:10px 20px; display:flex; justify-content:space-between; align-items:center;}
+  footer {background:#222; color:#fff; padding:20px;}
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="#">Логотип</a></li>
+      <li><a href="#">Главная</a></li>
+      <li>
+        <a href="#">Направления ▼</a>
+        <div class="dropdown">
+          <a href="#">Растениеводство</a><br>
+          <a href="#">Животноводство</a><br>
+          <a href="#">Пищевая промышленность</a>
+        </div>
+      </li>
+      <li><a href="#">Обучение</a></li>
+      <li><a href="#">О Центре</a></li>
+      <li><a href="#">Поиск</a></li>
+      <li><a href="#">Регион</a></li>
+      <li><a href="#">Подобрать решение</a></li>
+    </ul>
+  </nav>
+</header>
+<section class="hero">
+  <h1>Заголовок</h1>
+  <p>Подзаголовок</p>
+  <button>Начать</button>
+</section>
+<section class="advantages">
+  <div class="item">
+    <div>Иконка1</div>
+    <p>Преимущество 1</p>
+  </div>
+  <div class="item">
+    <div>Иконка2</div>
+    <p>Преимущество 2</p>
+  </div>
+  <div class="item">
+    <div>Иконка3</div>
+    <p>Преимущество 3</p>
+  </div>
+  <div class="item">
+    <div>Иконка4</div>
+    <p>Преимущество 4</p>
+  </div>
+</section>
+<section class="sectors">
+  <div class="tabs">
+    <button onclick="openTab(event, 'plant')">Растениеводство</button>
+    <button onclick="openTab(event, 'animal')">Животноводство</button>
+    <button onclick="openTab(event, 'food')">Пищевая промышленность</button>
+  </div>
+  <div id="plant" class="tabcontent">
+    <div class="accordion" onclick="toggleAccordion(this)">Виды бизнеса</div>
+    <div class="panel">Список бизнесов по растениеводству</div>
+  </div>
+  <div id="animal" class="tabcontent">
+    <div class="accordion" onclick="toggleAccordion(this)">Виды бизнеса</div>
+    <div class="panel">Список бизнесов по животноводству</div>
+  </div>
+  <div id="food" class="tabcontent">
+    <div class="accordion" onclick="toggleAccordion(this)">Виды бизнеса</div>
+    <div class="panel">Список бизнесов по пищевой промышленности</div>
+  </div>
+</section>
+<section class="info">
+  <h2>Цифровизация АПК</h2>
+  <p>Описание блока</p>
+  <button>Подробнее</button>
+</section>
+<section class="info">
+  <h2>Оборудование</h2>
+  <p>Описание блока</p>
+  <button>Подробнее</button>
+</section>
+<section class="slider">
+  <h2>Сейчас на сайте смотрят</h2>
+  <div class="slide">Карточка 1</div>
+  <div class="slide">Карточка 2</div>
+  <div class="slide">Карточка 3</div>
+</section>
+<section class="slider">
+  <h2>Топ программ обучения</h2>
+  <div class="slide">Программа 1</div>
+  <div class="slide">Программа 2</div>
+  <div class="slide">Программа 3</div>
+</section>
+<section class="faq">
+  <h2>FAQ</h2>
+  <div class="accordion" onclick="toggleAccordion(this)">Вопрос 1</div>
+  <div class="panel">Ответ 1</div>
+  <div class="accordion" onclick="toggleAccordion(this)">Вопрос 2</div>
+  <div class="panel">Ответ 2</div>
+</section>
+<section class="partners">
+  <h2>Партнеры и кейсы</h2>
+  <div class="slide">Логотип 1</div>
+  <div class="slide">Логотип 2</div>
+  <div class="slide">Логотип 3</div>
+  <div class="slide">Кейс 1</div>
+  <div class="slide">Кейс 2</div>
+</section>
+<div class="sticky-cta">
+  <span>Готовы к сотрудничеству?</span>
+  <button>Связаться</button>
+</div>
+<footer>
+  <p>Меню | Контакты | Юридическая информация | Соцсети</p>
+</footer>
+<script>
+function openTab(evt, name) {
+  var i, tabcontent, tabs;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tabs = document.querySelectorAll(".tabs button");
+  for (i = 0; i < tabs.length; i++) {
+    tabs[i].classList.remove("active");
+  }
+  document.getElementById(name).style.display = "block";
+  evt.currentTarget.classList.add("active");
+}
+function toggleAccordion(element) {
+  element.classList.toggle("active");
+  var panel = element.nextElementSibling;
+  if (panel.style.display === "block") {
+    panel.style.display = "none";
+  } else {
+    panel.style.display = "block";
+  }
+}
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelector(".tabs button").click();
+});
+</script>
+</body>
+</html>
+
